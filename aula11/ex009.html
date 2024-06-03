@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009</title>
+
+    <style>
+        body{
+            background-color: gray;
+            font-size: larger;
+        }
+        div#res{
+            color: blue;
+        }
+        button{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de países</h1>
+    Qual é o seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var pais = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            if(pais.value == 'Brasil'){
+                res.style.color = 'green'
+                res.innerHTML = 'Você é brasileiro'
+            }else if(pais.value == 'Estados Unidos'){
+                res.style.color = 'blue'
+                res.innerHTML = 'Você é estadunidense'
+            }else if(pais.value == ""){
+                res.style.color = 'orange'
+                res.innerHTML = 'Console Vazio'
+            }else{
+                res.style.color = 'yellow'
+                res.innerHTML = 'Você é estrangeiro'
+            }
+        } 
+    </script>
+</body>
+</html>
